@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdullah Hussain - Full Stack Developer</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans">
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full bg-white/70 backdrop-blur-md shadow-sm z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <h1 class="text-xl font-bold text-blue-600">Abdullah Hussain</h1>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link text-slate-800 hover:text-blue-600 hover:underline transition-colors duration-200">Home</a>
+                        <a href="#about" class="nav-link text-slate-800 hover:text-blue-600 hover:underline transition-colors duration-200">About</a>
+                        <a href="#skills" class="nav-link text-slate-800 hover:text-blue-600 hover:underline transition-colors duration-200">Skills</a>
+                        <a href="#projects" class="nav-link text-slate-800 hover:text-blue-600 hover:underline transition-colors duration-200">Projects</a>
+                        <a href="#experience" class="nav-link text-slate-800 hover:text-blue-600 hover:underline transition-colors duration-200">Experience</a>
+                        <a href="#contact" class="nav-link text-slate-800 hover:text-blue-600 hover:underline transition-colors duration-200">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-slate-800 hover:text-blue-600 focus:outline-none focus:text-blue-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white/95 backdrop-blur-md border-t border-slate-200">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="mobile-nav-link block px-3 py-2 text-slate-800 hover:text-blue-600 hover:underline transition-colors duration-200">Home</a>
+                <a href="#about" class="mobile-nav-link block px-3 py-2 text-slate-800 hover:text-blue-600 hover:underline transition-colors duration-200">About</a>
+                <a href="#skills" class="mobile-nav-link block px-3 py-2 text-slate-800 hover:text-blue-600 hover:underline transition-colors duration-200">Skills</a>
+                <a href="#projects" class="mobile-nav-link block px-3 py-2 text-slate-800 hover:text-blue-600 hover:underline transition-colors duration-200">Projects</a>
+                <a href="#experience" class="mobile-nav-link block px-3 py-2 text-slate-800 hover:text-blue-600 hover:underline transition-colors duration-200">Experience</a>
+                <a href="#contact" class="mobile-nav-link block px-3 py-2 text-slate-800 hover:text-blue-600 hover:underline transition-colors duration-200">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-4">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-bold text-slate-800 mb-6 fade-in">
+                Abdullah Hussain
+            </h1>
+            <h2 class="text-2xl md:text-3xl text-blue-600 mb-8 fade-in">
+                Full Stack Developer
+            </h2>
+            <p class="text-lg md:text-xl text-slate-600 mb-8 max-w-3xl mx-auto fade-in">
+                I build scalable and user-focused web applications using Django, Flask, React, and Node.js.
+            </p>
+            <div class="text-lg text-slate-500 mb-12 fade-in">
+                <span id="typewriter">Deploying ideas into code...</span>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in">
+                <a href="#projects" class="bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition-colors duration-200 font-medium">
+                    View Projects
+                </a>
+                <a href="#contact" class="border border-blue-600 text-blue-600 px-6 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-200 font-medium">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <!-- Profile Image -->
+                <div class="flex justify-center md:justify-start">
+                    <div class="w-64 h-64 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full shadow-lg flex items-center justify-center">
+                        <i class="fas fa-user text-white text-6xl"></i>
+                    </div>
+                </div>
+                
+                <!-- About Content -->
+                <div class="text-center md:text-left">
+                    <h2 class="text-4xl font-bold text-slate-800 mb-6">About Me</h2>
+                    <p class="text-lg text-slate-600 leading-relaxed">
+                        I'm a full stack developer with 2 years of experience building functional, efficient, and user-friendly web apps. I specialize in Python (Django/Flask) and React. I love solving real-world problems with code and currently seek a mid-level or startup developer role to contribute to impactful projects.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-slate-800 mb-12">Skills</h2>
+            
+            <!-- Frontend Skills -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-slate-800 mb-6 text-center">Frontend</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+                    <div class="skill-card p-4 border border-slate-200 rounded-xl text-center hover:shadow-lg hover:bg-white transition-all duration-200">
+                        <i class="fab fa-react text-3xl text-blue-500 mb-2"></i>
+                        <div class="text-slate-800 font-medium">React</div>
+                    </div>
+                    <div class="skill-card p-4 border border-slate-200 rounded-xl text-center hover:shadow-lg hover:bg-white transition-all duration-200">
+                        <i class="fab fa-js-square text-3xl text-yellow-500 mb-2"></i>
+                        <div class="text-slate-800 font-medium">JavaScript</div>
+                    </div>
+                    <div class="skill-card p-4 border border-slate-200 rounded-xl text-center hover:shadow-lg hover:bg-white transition-all duration-200">
+                        <i class="fab fa-html5 text-3xl text-orange-500 mb-2"></i>
+                        <div class="text-slate-800 font-medium">HTML5</div>
+                    </div>
+                    <div class="skill-card p-4 border border-slate-200 rounded-xl text-center hover:shadow-lg hover:bg-white transition-all duration-200">
+                        <i class="fab fa-css3-alt text-3xl text-blue-400 mb-2"></i>
+                        <div class="text-slate-800 font-medium">CSS3</div>
+                    </div>
+                    <div class="skill-card p-4 border border-slate-200 rounded-xl text-center hover:shadow-lg hover:bg-white transition-all duration-200">
+                        <i class="fas fa-palette text-3xl text-cyan-500 mb-2"></i>
+                        <div class="text-slate-800 font-medium">Tailwind</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Backend Skills -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-slate-800 mb-6 text-center">Backend</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                    <div class="skill-card p-4 border border-slate-200 rounded-xl text-center hover:shadow-lg hover:bg-white transition-all duration-200">
+                        <i class="fab fa-python text-3xl text-green-500 mb-2"></i>
+                        <div class="text-slate-800 font-medium">Python</div>
+                    </div>
+                    <div class="skill-card p-4 border border-slate-200 rounded-xl text-center hover:shadow-lg hover:bg-white transition-all duration-200">
+                        <i class="fas fa-server text-3xl text-green-600 mb-2"></i>
+                        <div class="text-slate-800 font-medium">Django</div>
+                    </div>
+                    <div class="skill-card p-4 border border-slate-200 rounded-xl text-center hover:shadow-lg hover:bg-white transition-all duration-200">
+                        <i class="fas fa-flask text-3xl text-gray-600 mb-2"></i>
+                        <div class="text-slate-800 font-medium">Flask</div>
+                    </div>
+                    <div class="skill-card p-4 border border-slate-200 rounded-xl text-center hover:shadow-lg hover:bg-white transition-all duration-200">
+                        <i class="fab fa-node-js text-3xl text-green-600 mb-2"></i>
+                        <div class="text-slate-800 font-medium">Node.js</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Databases -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-slate-800 mb-6 text-center">Databases</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                    <div class="skill-card p-4 border border-slate-200 rounded-xl text-center hover:shadow-lg hover:bg-white transition-all duration-200">
+                        <i class="fas fa-database text-3xl text-blue-500 mb-2"></i>
+                        <div class="text-slate-800 font-medium">PostgreSQL</div>
+                    </div>
+                    <div class="skill-card p-4 border border-slate-200 rounded-xl text-center hover:shadow-lg hover:bg-white transition-all duration-200">
+                        <i class="fas fa-leaf text-3xl text-green-500 mb-2"></i>
+                        <div class="text-slate-800 font-medium">MongoDB</div>
+                    </div>
+                    <div class="skill-card p-4 border border-slate-200 rounded-xl text-center hover:shadow-lg hover:bg-white transition-all duration-200">
+                        <i class="fas fa-memory text-3xl text-red-600 mb-2"></i>
+                        <div class="text-slate-800 font-medium">Redis</div>
+                    </div>
+                    <div class="skill-card p-4 border border-slate-200 rounded-xl text-center hover:shadow-lg hover:bg-white transition-all duration-200">
+                        <i class="fas fa-server text-3xl text-orange-500 mb-2"></i>
+                        <div class="text-slate-800 font-medium">MySQL</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tools & Technologies -->
+            <div>
+                <h3 class="text-2xl font-semibold text-slate-800 mb-6 text-center">Tools & Technologies</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+                    <div class="skill-card p-4 border border-slate-200 rounded-xl text-center hover:shadow-lg hover:bg-white transition-all duration-200">
+                        <i class="fab fa-docker text-3xl text-blue-600 mb-2"></i>
+                        <div class="text-slate-800 font-medium">Docker</div>
+                    </div>
+                    <div class="skill-card p-4 border border-slate-200 rounded-xl text-center hover:shadow-lg hover:bg-white transition-all duration-200">
+                        <i class="fas fa-key text-3xl text-red-500 mb-2"></i>
+                        <div class="text-slate-800 font-medium">JWT</div>
+                    </div>
+                    <div class="skill-card p-4 border border-slate-200 rounded-xl text-center hover:shadow-lg hover:bg-white transition-all duration-200">
+                        <i class="fab fa-git-alt text-3xl text-orange-500 mb-2"></i>
+                        <div class="text-slate-800 font-medium">Git</div>
+                    </div>
+                    <div class="skill-card p-4 border border-slate-200 rounded-xl text-center hover:shadow-lg hover:bg-white transition-all duration-200">
+                        <i class="fas fa-cloud text-3xl text-yellow-500 mb-2"></i>
+                        <div class="text-slate-800 font-medium">AWS</div>
+                    </div>
+                    <div class="skill-card p-4 border border-slate-200 rounded-xl text-center hover:shadow-lg hover:bg-white transition-all duration-200">
+                        <i class="fas fa-code-branch text-3xl text-purple-500 mb-2"></i>
+                        <div class="text-slate-800 font-medium">REST APIs</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-slate-800 mb-12">Featured Projects</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-2xl shadow-lg overflow-hidden hover:-translate-y-1 transition-all duration-300">
+                    <div class="h-40 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
+                        <i class="fas fa-tools text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-3">API Testing Tool</h3>
+                        <p class="text-slate-600 mb-4">
+                            A lightweight Postman alternative built react JavaScript for testing REST APIs with a clean, intuitive interface.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="inline-block bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">React</span>
+                            <span class="inline-block bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">Tailwind</span>
+                            <span class="inline-block bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">JavaScript</span>
+                            <span class="inline-block bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">HTML/CSS</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="bg-blue-600 text-white rounded-lg px-3 py-2 hover:bg-blue-700 transition-colors duration-200 text-sm">
+                                Live Demo
+                            </a>
+                            <a href="#" class="border border-blue-600 text-blue-600 rounded-lg px-3 py-2 hover:bg-blue-50 transition-colors duration-200 text-sm">
+                                Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card bg-white rounded-2xl shadow-lg overflow-hidden hover:-translate-y-1 transition-all duration-300">
+                    <div class="h-40 bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center">
+                        <i class="fas fa-book text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-3">BookStore App</h3>
+                        <p class="text-slate-600 mb-4">
+                            A full-stack eCommerce platform for books built with Django backend, JWT Authentication, Stripe Payment Integration featuring user authentication and payment integration.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="inline-block bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">Django</span>
+                            <span class="inline-block bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">Jwt Authenticaion</span>
+                            <span class="inline-block bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">Stripe</span>
+                            <span class="inline-block bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">HTML/CSS</span>
+
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="bg-blue-600 text-white rounded-lg px-3 py-2 hover:bg-blue-700 transition-colors duration-200 text-sm">
+                                Live Demo
+                            </a>
+                            <a href="#" class="border border-blue-600 text-blue-600 rounded-lg px-3 py-2 hover:bg-blue-50 transition-colors duration-200 text-sm">
+                                Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card bg-white rounded-2xl shadow-lg overflow-hidden hover:-translate-y-1 transition-all duration-300">
+                    <div class="h-40 bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center">
+                        <i class="fas fa-briefcase text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-3">Job Tracker</h3>
+                        <p class="text-slate-600 mb-4">
+                            A comprehensive tool to manage and track job applications with status updates, interview scheduling, and progress analytics.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="inline-block bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">React</span>
+                             <span class="inline-block bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">Csv Export</span>
+                             <span class="inline-block bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">Tailwind</span>
+                      
+                            </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="bg-blue-600 text-white rounded-lg px-3 py-2 hover:bg-blue-700 transition-colors duration-200 text-sm">
+                                Live Demo
+                            </a>
+                            <a href="#" class="border border-blue-600 text-blue-600 rounded-lg px-3 py-2 hover:bg-blue-50 transition-colors duration-200 text-sm">
+                                Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card bg-white rounded-2xl shadow-lg overflow-hidden hover:-translate-y-1 transition-all duration-300">
+                    <div class="h-40 bg-gradient-to-br from-orange-500 to-orange-700 flex items-center justify-center">
+                        <i class="fas fa-database text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-3">Node-React CRUD</h3>
+                        <p class="text-slate-600 mb-4">
+                            A full-stack REST application with JWT authentication, featuring user management, data validation, and real-time updates.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="inline-block bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">Node.js</span>
+                            <span class="inline-block bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">React</span>
+                            <span class="inline-block bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">JWT</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="bg-blue-600 text-white rounded-lg px-3 py-2 hover:bg-blue-700 transition-colors duration-200 text-sm">
+                                Live Demo
+                            </a>
+                            <a href="#" class="border border-blue-600 text-blue-600 rounded-lg px-3 py-2 hover:bg-blue-50 transition-colors duration-200 text-sm">
+                                Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-slate-800 mb-12">Experience</h2>
+            
+            <div class="bg-white shadow-md rounded-xl p-8 max-w-3xl mx-auto">
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-building text-white text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-semibold text-slate-800 mb-2">Full-Stack Developer</h3>
+                        <h4 class="text-lg text-blue-600 mb-4">Freelancer (Self-Employeed)</h4>
+                        <ul class="space-y-2 text-slate-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mr-3 mt-1"></i>
+                                Built and maintained RESTful APIs using Django and Flask frameworks
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mr-3 mt-1"></i>
+                                Integrated Redis caching and JWT authentication for improved performance and security
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mr-3 mt-1"></i>
+                                Developed scalable frontend and backend using React and Tailwind CSS for responsive UI development
+                            </li>
+                        
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-slate-100">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-slate-800 mb-6">Let's Connect</h2>
+            <p class="text-lg text-slate-600 mb-12 max-w-2xl mx-auto">
+                Reach out for opportunities, collaborations, or just a friendly chat. I'm always excited to discuss new projects and ideas!
+            </p>
+            
+            <!-- Social Media Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                <!-- GitHub Card -->
+                <a href="https://github.com" target="_blank" class="social-card bg-white rounded-2xl shadow-lg p-6 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 group">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-slate-800 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-colors duration-200">
+                            <i class="fab fa-github text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-slate-800 mb-2">GitHub</h3>
+                        <p class="text-slate-600 text-sm mb-4">View my code repositories and contributions</p>
+                        <span class="inline-block bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full group-hover:bg-blue-200 transition-colors duration-200">
+                            Visit Profile
+                        </span>
+                    </div>
+                </a>
+                
+                <!-- LinkedIn Card -->
+                <a href="https://linkedin.com" target="_blank" class="social-card bg-white rounded-2xl shadow-lg p-6 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 group">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-700 transition-colors duration-200">
+                            <i class="fab fa-linkedin text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-slate-800 mb-2">LinkedIn</h3>
+                        <p class="text-slate-600 text-sm mb-4">Connect with me professionally</p>
+                        <span class="inline-block bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full group-hover:bg-blue-200 transition-colors duration-200">
+                            Visit Profile
+                        </span>
+                    </div>
+                </a>
+                
+                <!-- Email Card -->
+                <a href="mailto:abdullah@example.com" class="social-card bg-white rounded-2xl shadow-lg p-6 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 group">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-red-600 transition-colors duration-200">
+                            <i class="fas fa-envelope text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-slate-800 mb-2">Email</h3>
+                        <p class="text-slate-600 text-sm mb-4">Send me a direct message</p>
+                        <span class="inline-block bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full group-hover:bg-blue-200 transition-colors duration-200">
+                            Send Email
+                        </span>
+                    </div>
+                </a>
+                
+                <!-- Instagram Card -->
+                <a href="https://www.instagram.com/websolutionscreative/" target="_blank" class="social-card bg-white rounded-2xl shadow-lg p-6 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 group">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:from-purple-600 group-hover:to-pink-600 transition-all duration-200">
+                            <i class="fab fa-instagram text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-slate-800 mb-2">Instagram</h3>
+                        <p class="text-slate-600 text-sm mb-4">DM me for any queries</p>
+                        <span class="inline-block bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full group-hover:bg-blue-200 transition-colors duration-200">
+                            Visit Profile
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <div class="border-t border-slate-700 pt-6">
+                <p class="text-slate-400">
+                    © 2025 Abdullah Hussain. Built with Tailwind CSS and ❤️
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking on a link
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Navbar shadow on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+        
+        // Typewriter effect
+        const typewriterElement = document.getElementById('typewriter');
+        const text = 'Deploying ideas into code...';
+        let index = 0;
+        
+        function typeWriter() {
+            if (index < text.length) {
+                typewriterElement.textContent += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, 100);
+            } else {
+                // Reset after a delay
+                setTimeout(() => {
+                    typewriterElement.textContent = '';
+                    index = 0;
+                    typeWriter();
+                }, 3000);
+            }
+        }
+        
+        // Start typewriter effect after a delay
+        setTimeout(typeWriter, 1000);
+        
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements with fade-in class
+        const fadeElements = document.querySelectorAll('.fade-in, .skill-card, .project-card');
+        fadeElements.forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+        
+    </script>
+</body>
+</html>
